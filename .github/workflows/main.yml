@@ -3,7 +3,7 @@ name: CI on Push and Pull Request
 on: [push, pull_request]
 
 jobs:
- Practice:
+  Practice:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v1
