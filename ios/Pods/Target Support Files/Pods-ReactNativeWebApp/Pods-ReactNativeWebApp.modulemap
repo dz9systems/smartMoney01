@@ -1,0 +1,6 @@
+module Pods_ReactNativeWebApp {
+  umbrella header "Pods-ReactNativeWebApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
