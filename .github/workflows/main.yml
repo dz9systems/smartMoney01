@@ -26,7 +26,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Android
-      run: ./gradlew build
+      run: yarn build
         
         
   iOS:
@@ -34,7 +34,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: iOS
-      run: |
-        cd ./Users/isaiahlove/Documents/CODE_PROJECTS/smartMoney01
-        nuget restore
-        msbuild ./Users/isaiahlove/Documents/CODE_PROJECTS/smartMoney01.iOS/smartMoney01.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
+      run: yarn build
