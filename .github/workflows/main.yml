@@ -26,7 +26,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Android
-      run: yarn build
+      run: |
+        cd Blank
+        nuget restore
+        cd smartMoney01.Android
+        msbuild smartMoney01.Android.csproj /verbosity:normal /t:Rebuild /p:Configuration=Debug
         
         
   iOS:
@@ -34,4 +38,5 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: iOS
-      run: yarn build
+      run: |
+        npm run build --if-present
