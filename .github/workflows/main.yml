@@ -40,5 +40,4 @@ jobs:
     - name: iOS
       run: |
         cd .
-        nuget restore
-        msbuild smartMoney01.iOS/smartMoney01.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
+        rm -rf dist/ && webpack --mode=production --config webpack.config.js
