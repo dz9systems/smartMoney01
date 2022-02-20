@@ -39,6 +39,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: iOS
       run: |
-        cd ./dz9systems/smartMoney01
+        cd .
         nuget restore
-        msbuild ./dz9systems/smartMoney01.iOS/smartMoney01.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
+        msbuild smartMoney01.iOS/smartMoney01.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
