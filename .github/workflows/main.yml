@@ -40,4 +40,4 @@ jobs:
     - name: iOS
       run: |
         cd .
-        rm -rf dist/ && webpack --mode=production --config webpack.config.js
+        --config webpack.config.js
