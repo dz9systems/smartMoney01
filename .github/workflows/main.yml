@@ -40,4 +40,4 @@ jobs:
     - name: iOS
       run: |
         cd .
-        webpack.config.js
+        
