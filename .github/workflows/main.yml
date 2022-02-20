@@ -24,10 +24,10 @@ jobs:
   Android:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Android
       run: |
-        cd Blank
+        cd smartMoney01
         nuget restore
         cd smartMoney01.Android
         msbuild smartMoney01.Android.csproj /verbosity:normal /t:Rebuild /p:Configuration=Debug
@@ -36,7 +36,8 @@ jobs:
   iOS:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: iOS
+    - uses: actions/checkout@v2
       run: |
-        npm run build --if-present
+        cd smartMoney01
+        nuget restore
+        msbuild smartMoney01.iOS/Blank.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
