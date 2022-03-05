@@ -27,7 +27,7 @@ jobs:
    steps:
     - uses: actions/checkout@v1
     - name: Use Node.js
-    - run: |
+      run: |
        yarn
        yarn build --if-present
        yarn test
