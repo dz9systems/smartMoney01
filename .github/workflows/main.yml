@@ -21,19 +21,18 @@ jobs:
         cd ..
         ls
         
-  Android:
-    runs-on: macos-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Android
-      run: |
-        cd .
         
-  iOS:
-    runs-on: macos-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: iOS
-      run: |
-       npm run build # run the "build" package script
+  Build:
+   runs-on: macos-latest
+   steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js
+    - run: |
+       yarn
+       yarn build --if-present
+       yarn test
+    
+      
+    
+ 
         
