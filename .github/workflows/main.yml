@@ -26,8 +26,7 @@ jobs:
    runs-on: macos-latest
    steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js
-    - name: npm install, build, and test
+    - name: Use Node.js - npm install, build, and test
       run: |
        yarn i
        yarn build --if-present
