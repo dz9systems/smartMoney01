@@ -11,23 +11,19 @@ jobs:
  build: 
    # The type of runner that the job will run on
    runs-on: ubuntu-latest
-   
    # Steps represent a sequence of tasks that will be executed as part of the job
    steps:
    # Checks-out your repository under $GITHUB_WORKSPAVE, so your job can access it
    - name: Checkout repository
      uses: actions/checkout@v2
-   
    # Install dependencies
    - name: Install dependencies
      run: yarn install
-     
    # Run build
    - name: Run build
      run: |
       yarn build
-      yarn web
-     
+      yarn web 
    # Runs a singel command using the runners shell
    - name: Firebase Deploy
      run: |
