@@ -15,8 +15,19 @@ jobs:
    # Steps represent a sequence of tasks that will be executed as part of the job
    steps:
    # Checks-out your repository under $GITHUB_WORKSPAVE, so your job can access it
+   - name: Checkout repository
    - uses: actions/checkout@v2
    
+   # Install dependencies
+   - name: Install dependencies
+     run: yarn install
+     
+   # Run build
+   - name: Run build
+     run: |
+      yarn build
+      yarn web
+     
    # Runs a singel command using the runners shell
    - name: Firebase Deploy
      run: |
