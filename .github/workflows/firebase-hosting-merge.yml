@@ -37,6 +37,7 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TEST_WEBSITE_PROD_6A347 }}'
           channelId: live
           projectId: test-website-prod-6a347
+          run: firebase deploy --token ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TEST_WEBSITE_PROD_6A347 }}
      
          
 
