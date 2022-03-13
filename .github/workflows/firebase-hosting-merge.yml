@@ -29,14 +29,7 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
           npm ci --ignore-scripts
-          npm run build 
-          npm run web
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TEST_WEBSITE_PROD_6A347 }}'
-          channelId: live
-          projectId: test-website-prod-6a347
+       
           
       
      
