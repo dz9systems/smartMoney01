@@ -34,7 +34,7 @@ const Home = () => {
       <TouchableOpacity
         onPress={() => setCount(count + 1)}
         style={styles.button}>
-        <Text>CLICK ME PLEASE!</Text>
+        <Text>Click Me!</Text>
       </TouchableOpacity>
       <Text>
         You clicked {count} {text}
