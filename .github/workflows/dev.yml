@@ -31,5 +31,5 @@ jobs:
    - name: Firebase Deploy
      run: |
        sudo yarn install -g firebase-tools
-       firebase use dev --token ${{secrets.FIREBASE_TOKEN}}
-       firebase deploy --token ${{secrets.FIREBASE_TOKEN}}
+       firebase use dev --token ${{'AIzaSyB914k9Xw_3NIpzOMSqpd6COIdTzWkcmw4'}}
+       firebase deploy --token ${{'AIzaSyB914k9Xw_3NIpzOMSqpd6COIdTzWkcmw4'}}
